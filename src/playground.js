@@ -4,4 +4,12 @@ const sum = (arr, idx = 0, total = 0) => {
   return sum(arr, idx + 1, total + arr[idx]);
 };
 
-console.log(sum([1, 2, 3]));
+// console.log(sum([1, 2, 3]));
+
+const reverse = (str, idx = str.length, newStr = '') => {
+  if (idx === 0) return newStr;
+  newStr += str[idx];
+  return reverse(str, idx - 1, newStr);
+};
+
+console.log(reverse('recursion!'));
