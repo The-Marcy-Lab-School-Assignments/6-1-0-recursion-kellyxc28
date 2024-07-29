@@ -23,4 +23,12 @@ const fibIter = (n, arr = [0, 1]) => {
   return `Value: ${arr[n]}`;
 };
 
-console.log(fibIter(4));
+// console.log(fibIter(4));
+
+const fibRec = (n, arr = [0, 1], idx = 2) => {
+  if (n === 0) return arr[idx];
+  arr.push(arr[idx - 1] + arr[idx - 2]);
+  return fibRec(n - 1, arr, idx + 1);
+};
+
+console.log(fibRec(4));

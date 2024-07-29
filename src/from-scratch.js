@@ -17,14 +17,17 @@ const reverse = (str, idx = str.length - 1, newStr = '') => {
 const fibIter = (n, arr = [0, 1]) => {
   for (let i = 2; i <= n; i++) {
     arr.push(arr[i - 1] + arr[i - 2]);
-    console.log(arr);
+    // console.log(arr);
   }
 
   return arr[n];
 };
 
 // Recursive fibonacci
-const fibRec = (n) => {};
+const fibRec = (n) => {
+  if (n < 2) return n;
+  return fibRec(n - 1) + fibRec(n - 2);
+};
 
 // Return the index of target in arr, or -1 if not found using recursion
 const binarySearch = (arr, target, start = 0, end = arr.length - 1) => {};
