@@ -14,7 +14,14 @@ const reverse = (str, idx = str.length - 1, newStr = '') => {
 };
 
 // Iterative approach to solving the fibonacci problem
-const fibIter = (n) => {};
+const fibIter = (n, arr = [0, 1]) => {
+  for (let i = 2; i <= n; i++) {
+    arr.push(arr[i - 1] + arr[i - 2]);
+    console.log(arr);
+  }
+
+  return arr[n];
+};
 
 // Recursive fibonacci
 const fibRec = (n) => {};

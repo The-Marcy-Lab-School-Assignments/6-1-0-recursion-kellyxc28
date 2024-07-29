@@ -12,4 +12,15 @@ const reverse = (str, idx = str.length, newStr = '') => {
   return reverse(str, idx - 1, newStr);
 };
 
-console.log(reverse('recursion!'));
+// console.log(reverse('recursion!'));
+
+const fibIter = (n, arr = [0, 1]) => {
+  for (let i = 2; i <= n; i++) {
+    arr.push(arr[i - 1] + arr[i - 2]);
+    console.log(arr);
+  }
+
+  return `Value: ${arr[n]}`;
+};
+
+console.log(fibIter(4));
